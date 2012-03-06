@@ -20,7 +20,7 @@ module NagiosStatus
 
     get '/host/:key/:value' do
       settings.nagios_status.hosts.select do |node|
-        node[params[:key]] == params[:value]
+        node[params[:key]].to_s == params[:value]
       end.to_json
     end
 
@@ -30,7 +30,7 @@ module NagiosStatus
 
     get '/service/:key/:value' do
       settings.nagios_status.services.select do |service|
-        service[params[:key]] == params[:value]
+        service[params[:key]].to_s == params[:value]
       end.to_json
     end
 
