@@ -1,0 +1,2 @@
+--- 
+:nagios_status_file: /var/log/nagios/status.dat
