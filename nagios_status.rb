@@ -18,7 +18,7 @@ module NagiosStatus
       settings.nagios_status.hosts.to_json
     end
 
-    get '/host/:key/:value' do
+    get '/hosts/:key/:value' do
       settings.nagios_status.hosts.select do |node|
         node[params[:key]].to_s == params[:value]
       end.to_json
@@ -28,7 +28,7 @@ module NagiosStatus
       settings.nagios_status.services.to_json
     end
 
-    get '/service/:key/:value' do
+    get '/services/:key/:value' do
       settings.nagios_status.services.select do |service|
         service[params[:key]].to_s == params[:value]
       end.to_json
