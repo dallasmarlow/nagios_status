@@ -4,6 +4,7 @@ nagios status is a simple json http interface to nagios status using [nagios_par
 
 ## examples
 
+```
 get /hosts/has_been_checked/0
 get /hosts/host_name/dallas.marlow.com
 
@@ -12,3 +13,4 @@ get /services/current_state/0
 
 get /programs
 get /info
+````
